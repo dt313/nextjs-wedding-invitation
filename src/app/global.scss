@@ -1,0 +1,49 @@
+@import "normalize.css";
+
+:root {
+  --background-color: #ecb7b0;
+  --primary-1: #c5a857;
+
+  --text-color: #333;
+  --font-family: "Fira Code", Monaco, Consolas, "Ubuntu Mono", monospace;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+body {
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizespeed;
+  color: var(--text-color);
+  overflow: overlay;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

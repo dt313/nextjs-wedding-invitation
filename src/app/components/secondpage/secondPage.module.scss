@@ -1,0 +1,42 @@
+.wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px;
+  background-color: #f0e6df;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-size: 2.6rem;
+  line-height: 0;
+  color: #c6a959;
+}
+
+.description {
+  font-size: 1, 4rem;
+  text-align: center;
+}
+
+.infomation {
+  max-width: 1024px;
+  width: 100%;
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  flex: 1 1;
+}
+
+@media (max-width: 768px) {
+  .infomation {
+    flex-direction: column;
+
+    .info {
+      margin-bottom: 100px;
+    }
+  }
+}
