@@ -8,7 +8,7 @@ import Header from "./header";
 import Arrow from "~/app/components/arrow";
 const cx = classNames.bind(styles);
 
-function IntroPage({ handleOpen, name, params }) {
+function IntroPage({ handleOpen, name = "You" }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -42,7 +42,7 @@ function IntroPage({ handleOpen, name, params }) {
             <div className={cx("text-box")}>
               <div className={cx("name-box")}>
                 <h3 className={cx("name")}>Dương</h3>
-                <span className={cx("and")}>and</span>
+                <span className={cx("and")}>&</span>
                 <h3 className={cx("name")}>Linh</h3>
               </div>
 

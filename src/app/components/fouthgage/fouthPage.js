@@ -1,63 +1,21 @@
 import classNames from "classnames/bind";
 import styles from "./fouthPage.module.scss";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import Analyst from "~/app/components/analyst";
 const cx = classNames.bind(styles);
 
-const WISHES = [
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: false,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: false,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-];
-
-function FouthPage() {
+function FouthPage({ slug }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [isWishesTab, setIsWishesTab] = useState(true);
-  const [wishes, setWishes] = useState(WISHES || []);
+  const [wishes, setWishes] = useState([]);
   const [name, setName] = useState(" ");
   const [wish, setWish] = useState(" ");
   const [isAttend, setIsAttend] = useState(null);
   const [error, setError] = useState(null);
 
+  console.log(slug);
   const style = {
     transform: isInView ? "none" : "translateY(700px)",
     transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
@@ -85,10 +43,35 @@ function FouthPage() {
     if (isValid) {
       console.log({ name, wish, isAttend });
       setWishes((pre) => [{ name, wish, isAttend }, ...pre]);
-      setName("");
-      setWish("");
+
+      var data = { name, wish, isAttend };
+      fetch("https://65788350f08799dc80457e4e.mockapi.io/api/v1/wishes", {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+          alert("Cảm ơn vì lời chúc của bạn !");
+          setName("");
+          setWish("");
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     }
   };
+
+  useEffect(() => {
+    fetch("https://65788350f08799dc80457e4e.mockapi.io/api/v1/wishes")
+      .then((response) => response.json())
+      .then((data) => {
+        setWishes(data);
+      });
+  }, []);
 
   return (
     <div className={cx("wrapper")} ref={ref}>
@@ -214,7 +197,7 @@ function FouthPage() {
                     )}
                   </div>
                   {wishes.length > 0 && (
-                    <a className={cx("see-all")} href="/wishes">
+                    <a className={cx("see-all")} href={`/wishes?name=${slug}`}>
                       Xem tất cả
                     </a>
                   )}

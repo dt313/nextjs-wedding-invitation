@@ -1,55 +1,25 @@
 "use client";
-import { useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./wishes.module.scss";
 
 const cx = classNames.bind(styles);
 
-const WISHES = [
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: false,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: false,
-  },
-  {
-    name: "Jonh Weh",
-    wish: "Please kindly help us prepare everything better by confirming your attendance to our wedding event",
-    isAttend: true,
-  },
-];
+function Wishes({}) {
+  const [wishes, setWishes] = useState([]);
+  const searchParams = useSearchParams();
 
-function Wishes() {
-  const [wishes, setWishes] = useState(WISHES || []);
+  const name = searchParams.get("name");
+
+  useEffect(() => {
+    fetch("https://65788350f08799dc80457e4e.mockapi.io/api/v1/wishes")
+      .then((response) => response.json())
+      .then((data) => {
+        setWishes(data);
+      });
+  }, []);
+
   return (
     <div className={cx("wrapper")}>
       <h2 className={cx("title")}>ALL WISHES FOR YOUU</h2>
@@ -68,7 +38,7 @@ function Wishes() {
         )}
       </div>
 
-      <a href="/" className={cx("link")}>
+      <a href={`/${name}`} className={cx("link")}>
         Go to back
       </a>
     </div>

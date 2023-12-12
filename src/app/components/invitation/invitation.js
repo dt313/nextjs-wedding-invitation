@@ -67,7 +67,7 @@ function Invitation({ name }) {
             ></img>
           </div>
           <ThirstPage />
-          <FouthPage />
+          <FouthPage slug={name} />
           <Timer />
           <Gift />
           <Journey />

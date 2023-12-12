@@ -9,19 +9,19 @@ function SecondPage() {
   const info = [
     {
       name: "Carda",
-      fullname: "Padmi Carla Maryati",
+      fullname: "Nguyen Van A",
       gender: "female",
-      fatherName: "Rendy Oktavia",
-      motherName: "Lisna Tri Varensia",
+      fatherName: "Nguyen Van D ",
+      motherName: "Nguyen Thi E",
       avatar:
         "https://hi.possiblewedding.com/wp-content/uploads/2022/05/so-tel-me-when.jpg",
     },
     {
       name: "Bryan",
-      fullname: "Bryan Yuda Syahrani",
+      fullname: "Nguyen Thi B",
       gender: "male",
-      fatherName: "Sujendro Ramadhansyah ",
-      motherName: "Bella Ernando",
+      fatherName: "Nguyen Van A ",
+      motherName: "Nguyen Thi C",
       avatar:
         "https://hi.possiblewedding.com/wp-content/uploads/2022/05/siaaahhh.jpg",
     },

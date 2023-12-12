@@ -32,16 +32,16 @@ function Analyst({ data }) {
             {
               label: ["YES"],
               data: [yes],
-              backgroundColor: ["rgba(255, 99, 132, 0.2)"],
-              borderColor: ["rgb(255, 99, 132)"],
+              backgroundColor: ["rgba(124, 149, 120, 0.2)"],
+              borderColor: ["rgb(124, 149, 120)"],
               borderWidth: 1,
             },
             {
               label: ["NO"],
               data: [no],
 
-              backgroundColor: ["rgba(153, 102, 255, 0.2)"],
-              borderColor: ["rgb(153, 102, 255)"],
+              backgroundColor: ["rgba(214 ,162 ,81, 0.2)"],
+              borderColor: ["rgb(214 ,162 ,81)"],
               borderWidth: 1,
             },
           ],

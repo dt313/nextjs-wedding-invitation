@@ -48,10 +48,8 @@ function Infomation({
         alt={fullname}
         style={gender === "male" ? styleRight : styleLeft}
       />
-      <h3 className={cx("name")} ref={refText} style={styleText}>
-        {name}
-      </h3>
-      <h5 className={cx("fullname")} style={styleText}>
+
+      <h5 className={cx("fullname")} ref={refText} style={styleText}>
         {fullname}
       </h5>
       <strong className={cx("gender")} style={styleText}>
