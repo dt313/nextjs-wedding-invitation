@@ -57,7 +57,7 @@ function Wishes() {
         {wishes.length > 0 ? (
           wishes.map((w, index) => {
             return (
-              <div className={cx("wish")}>
+              <div className={cx("wish")} key={index}>
                 <span className={cx("name")}>{w.name}</span>
                 <p className={cx("content")}>{w.wish}</p>
               </div>
@@ -68,7 +68,9 @@ function Wishes() {
         )}
       </div>
 
-      <a>Go to back</a>
+      <a href="/" className={cx("link")}>
+        Go to back
+      </a>
     </div>
   );
 }

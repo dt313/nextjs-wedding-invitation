@@ -41,8 +41,8 @@ function SecondPage() {
       </h3>
 
       <p className={cx("description")} style={style}>
-        By the grace of God, we are pleased to announce our wedding to you, our
-        family and friends:
+        Chúng tôi vui mừng thông báo đám cưới của chúng tôi với bạn, gia đình và
+        bạn bè của chúng tôi:
       </p>
 
       <div className={cx("infomation")}>

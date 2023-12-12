@@ -46,7 +46,7 @@
   justify-content: center;
   align-items: center;
 
-  background-color: #8e0202;
+  background-color: var(--primary-6);
   color: #fff;
   font-size: 1.4rem;
 
@@ -59,6 +59,10 @@
 
 .small {
   width: 150px;
+}
+
+.black-icon {
+  color: black;
 }
 
 @media (max-width: 767px) {

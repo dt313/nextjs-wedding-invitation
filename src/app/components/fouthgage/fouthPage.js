@@ -95,16 +95,15 @@ function FouthPage() {
       <div className={cx("container")}>
         <div className={cx("box")} style={style}>
           <div className={cx("left")}>
-            <h4 className={cx("title")}>Reservation</h4>
+            <h4 className={cx("title")}>Gửi Lời Chúc</h4>
             <span className={cx("line")}></span>
             <p className={cx("description")}>
-              Please kindly help us prepare everything better by confirming your
-              attendance to our wedding event with the following RSVP form:
+              Hãy dành những lời chúc cho tốt đẹp nhất cho cô dâu và chú rể
             </p>
 
             <div className={cx("form")}>
               <div className={cx("input-block")}>
-                <span className={cx("lable")}>Name</span>
+                <span className={cx("lable")}>Tên</span>
                 <input
                   type="text"
                   className={cx("input")}
@@ -117,7 +116,7 @@ function FouthPage() {
                 />
               </div>
               <div className={cx("input-block")}>
-                <span className={cx("lable")}>Wishes</span>
+                <span className={cx("lable")}>Lời chúc</span>
                 <textarea
                   type="text"
                   className={cx("input", "large")}
@@ -131,7 +130,7 @@ function FouthPage() {
               </div>
 
               <div className={cx("input-block")}>
-                <span className={cx("lable")}>Will you attend ?</span>
+                <span className={cx("lable")}>Bạn sẽ đến chứ ?</span>
                 <div className={cx("check")}>
                   <input
                     type="radio"
@@ -145,7 +144,7 @@ function FouthPage() {
                     }}
                   />
                   <label htmlFor="yes" className={cx("option")}>
-                    Yes
+                    Có
                   </label>
                 </div>
                 <div className={cx("check")}>
@@ -161,7 +160,7 @@ function FouthPage() {
                     }}
                   />
                   <label htmlFor="no" className={cx("option")}>
-                    No
+                    Không
                   </label>
                 </div>
 
@@ -177,7 +176,7 @@ function FouthPage() {
                   scale: 0.9,
                 }}
               >
-                Send
+                Gửi
               </motion.button>
             </div>
           </div>
@@ -188,13 +187,13 @@ function FouthPage() {
                 className={cx("item", isWishesTab && "active")}
                 onClick={() => setIsWishesTab(true)}
               >
-                Wishes
+                Lời chúc
               </p>
               <p
                 className={cx("item", !isWishesTab && "active")}
                 onClick={() => setIsWishesTab(false)}
               >
-                Attend
+                Tham dự
               </p>
             </div>
             <div className={cx("body")}>
@@ -216,7 +215,7 @@ function FouthPage() {
                   </div>
                   {wishes.length > 0 && (
                     <a className={cx("see-all")} href="/wishes">
-                      See all
+                      Xem tất cả
                     </a>
                   )}
                 </div>

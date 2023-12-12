@@ -1,11 +1,32 @@
 @import "normalize.css";
 
+@font-face {
+  font-family: Amira;
+  src: url(./static/Fz-Amira.ttf);
+}
+
+@font-face {
+  font-family: Quick;
+  src: url(./static/Fz-Quick-Signature.ttf);
+}
+@font-face {
+  font-family: Moritza;
+  src: url(./static/FzTheMoritza.ttf);
+}
+
 :root {
-  --background-color: #ecb7b0;
-  --primary-1: #c5a857;
+  --background-color: #7c9578;
+  --primary-6: #8e0202;
+  --primary-5: #ffffff;
+  --primary-4: #a2af9f;
+
+  --primary-3: #e4e4e4;
+  --primary-2: #a3a1a2;
+  --primary-1: #d6a251;
 
   --text-color: #333;
   --font-family: "Fira Code", Monaco, Consolas, "Ubuntu Mono", monospace;
+  --font-family-1: "Courier New", Courier, monospace;
 }
 
 html {

@@ -55,12 +55,12 @@ function Infomation({
         {fullname}
       </h5>
       <strong className={cx("gender")} style={styleText}>
-        {gender === "male" ? "The Son of :" : "The Daughter of :"}
+        {gender === "male" ? "Con trai của :" : "Con gái của :"}
       </strong>
       <div className={cx("family")} style={styleText}>
-        <span className={cx("text")}>{"Mr. " + fatherName}</span>
+        <span className={cx("text")}>{"Ông " + fatherName}</span>
         <span className={cx("text")}>&</span>
-        <span className={cx("text")}>{"Mrs. " + motherName}</span>
+        <span className={cx("text")}>{"Bà " + motherName}</span>
       </div>
 
       <motion.a

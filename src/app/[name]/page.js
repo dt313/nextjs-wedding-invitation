@@ -2,6 +2,7 @@
 import classNames from "classnames/bind";
 import styles from "./page.module.scss";
 import Heart from "~/app/components/heart";
+import Head from "next/head";
 import Invitation from "~/app/components/invitation";
 import { useEffect, useState } from "react";
 
@@ -27,6 +28,10 @@ function Main({ params }) {
 
   return (
     <div className={cx("wrapper")}>
+      <Head>
+        <title>Thiệp cưới</title>
+        <meta property="og:title" content="Thiệp cưới" key="title" />
+      </Head>
       {/* {animation && (
         <div className={cx("heart-block")}>
           <Heart animation={animation} />

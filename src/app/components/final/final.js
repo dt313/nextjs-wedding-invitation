@@ -14,7 +14,7 @@ function Final() {
   };
   return (
     <div className={cx("wraper")}>
-      <h3 className={cx("title")}>Thank you</h3>
+      <h3 className={cx("title")}>Cảm ơn</h3>
       <div className={cx("img-box")}>
         <img
           ref={ref}
@@ -24,8 +24,8 @@ function Final() {
         />
       </div>
 
-      <span className={cx("final-text")}>See you on our big day</span>
-      <h2 className={cx("name")}> Carla & Bryan</h2>
+      <span className={cx("final-text")}>Hẹn gặp bạn vào ngày quan trọng</span>
+      <h2 className={cx("name")}> Linh và Dương</h2>
     </div>
   );
 }

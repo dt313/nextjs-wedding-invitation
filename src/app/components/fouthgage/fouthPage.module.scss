@@ -1,9 +1,10 @@
 .wrapper {
   width: 100%;
   // background-color: #333;
-  background-color: #f0e5df;
+  background-color: var(--primary-5);
   display: block;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .container {
@@ -11,7 +12,7 @@
   width: 100%;
   padding: 48px 0;
   padding-bottom: 100px;
-  background-color: #f0cfcc;
+  background-color: var(--primary-4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,8 +39,10 @@
 }
 
 .title {
-  font-size: 2rem;
-  color: #c5a857;
+  font-size: 3rem;
+  line-height: 0.1;
+  color: var(--primary-1);
+  font-family: Amira;
 }
 
 .line {
@@ -67,6 +70,7 @@
 
 .lable {
   display: block;
+  font-weight: bold;
 }
 
 .input {
@@ -82,7 +86,7 @@
   outline: none;
 
   &:focus {
-    border: 0.5px solid #c5a857;
+    border: 0.5px solid var(--primary-1);
   }
 }
 
@@ -117,8 +121,8 @@
   border-radius: 99999px;
   outline: none;
   border: none;
-  color: #fff;
-  background-color: #c5a857;
+  color: black;
+  background-color: var(--primary-1);
   cursor: pointer;
 }
 
@@ -142,7 +146,7 @@
   }
 
   .active {
-    background-color: #c5a857;
+    background-color: var(--primary-1);
   }
 }
 

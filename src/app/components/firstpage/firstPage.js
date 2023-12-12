@@ -28,10 +28,11 @@ function FirstPage() {
           <h3 className={cx("title")}>Tie The Knot</h3>
           <Header style={headerStyle} />
           <p className={cx("description")}>
-            “And one of His signs is that He created mates for you from
-            yourselves that you may find rest in them, and He put between you
-            love and compassion; most surely there are signs in this for a
-            people who reflect.”
+            “Anh muốn đem cả thế giới này tặng cho em cái em thích cũng là cái
+            anh thích . Cho dù khi em 70 , 80 tuổi , rằng có rụng hết thì vẫn
+            mãi là công chúa của anh . Em thường nói , sau này em già đi thì
+            phải làm thế nào . Anh chỉ có thể nói là anh đã chiều hư em rồi . Vì
+            chỉ có như vậy người khác mới không thể cướp em đi .”
           </p>
         </div>
 

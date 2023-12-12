@@ -9,7 +9,7 @@ function ThirstPage() {
   const weddingInfo = [
     {
       img: "https://hi.possiblewedding.com/wp-content/uploads/2023/01/wedding-ring-1-1.png",
-      title: "Akad",
+      title: "Nhà trai",
       date: "Sunday, December 31st 2023",
       time: "09.00 AM",
       address:
@@ -18,7 +18,7 @@ function ThirstPage() {
 
     {
       img: "https://hi.possiblewedding.com/wp-content/uploads/2023/01/wedding-arch-1-1-1.png",
-      title: "Reception",
+      title: "Nhà gái",
       date: "Sunday, December 31st 2023",
       time: "09.00 AM",
       address:
@@ -37,7 +37,7 @@ function ThirstPage() {
   return (
     <div className={cx("wrapper")} ref={ref}>
       <div className={cx("box")} style={style}>
-        <h3 className={cx("title")}>Which will be held on</h3>
+        <h3 className={cx("title")}>Đám cưới sẽ được tổ chức vào</h3>
 
         <div className={cx("addresses")}>
           {weddingInfo.map((info, index) => (
@@ -52,7 +52,9 @@ function ThirstPage() {
           ))}
         </div>
 
-        <p className={cx("footer-text")}>Thank you for your visit.</p>
+        <p className={cx("footer-text")}>
+          Chúng tôi rất vui với sự tham dự của bạn
+        </p>
       </div>
     </div>
   );

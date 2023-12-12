@@ -30,7 +30,10 @@ function AddressModel({
       <h3 className={cx("title")}>{title}</h3>
       <p className={cx("date")}>{date}</p>
       <p className={cx("time")}>{time}</p>
-      <Header icon={SiHomeassistantcommunitystore} />
+      <Header
+        className={cx("black-icon")}
+        icon={SiHomeassistantcommunitystore}
+      />
       <div className={cx("address")}>{address}</div>
       <motion.a
         style={style}
@@ -46,7 +49,7 @@ function AddressModel({
         ref={ref}
       >
         <FaMapMarkerAlt className={cx("icon")} />
-        RSVP
+        Happy
       </motion.a>
       <motion.a
         style={style}
@@ -61,7 +64,7 @@ function AddressModel({
         className={cx("btn")}
       >
         <FaMapMarkerAlt className={cx("icon")} />
-        Get Direction
+        Đường đi
       </motion.a>
     </div>
   );

@@ -105,23 +105,25 @@ function Timer() {
   return (
     <div className={cx("wrapper")} ref={ref}>
       <div className={cx("box")} style={style}>
-        <h3 className={cx("title")}>Counting down to the Big Day</h3>
+        <h3 className={cx("title")}>
+          Đếm thời gian tới ngày lễ lớn của chúng tôi
+        </h3>
         <div className={cx("countdown")}>
           <div className={cx("countdown-box")}>
             {state.days}
-            <span className={cx("legend")}>Days</span>
+            <span className={cx("legend")}>Ngày</span>
           </div>
           <div className={cx("countdown-box")}>
             {state.hours}
-            <span className={cx("legend")}>Hours</span>
+            <span className={cx("legend")}>Giờ</span>
           </div>
           <div className={cx("countdown-box")}>
             {state.minutes}
-            <span className={cx("legend")}>Minutes</span>
+            <span className={cx("legend")}>Phút</span>
           </div>
           <div className={cx("countdown-box")}>
             {state.seconds}
-            <span className={cx("legend")}>Seconds</span>
+            <span className={cx("legend")}>Giây</span>
           </div>
         </div>
 
@@ -138,7 +140,7 @@ function Timer() {
         >
           {" "}
           <FaCalendar className={cx("icon")} />
-          Add to Calendar
+          Thêm vào lịch
         </motion.a>
       </div>
     </div>

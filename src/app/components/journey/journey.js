@@ -54,7 +54,7 @@ const story = [
 function Journey() {
   return (
     <div className={cx("wrapper")}>
-      <h3 className={cx("title")}>Our Journey Start Here</h3>
+      <h3 className={cx("title")}>Hành trình của chúng tôi</h3>
 
       <div className={cx("video-block")}>
         <iframe

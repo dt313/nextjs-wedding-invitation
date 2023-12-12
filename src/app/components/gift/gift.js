@@ -22,10 +22,10 @@ function Gift() {
 
   return (
     <div className={cx("wrapper")} ref={ref}>
-      <h3 className={cx("title")}>Wedding Gift</h3>
+      <h3 className={cx("title")}>Quà cưới</h3>
       <p className={cx("description")} style={style}>
-        For family and friends who would like to send a gift. We would be glad
-        to receive it. Tap the following buttons to send them to us:
+        Dành cho gia đình (bạn bè) muốn gửi quà. Chúng tôi sẽ rất vui khi nhận
+        được nó. Nhấn vào các nút bên dưới để gửi chúng cho chúng tôi:
       </p>
       <button
         className={cx("btn")}
@@ -35,7 +35,7 @@ function Gift() {
         style={style}
       >
         <FaGift className={cx("icon")} />
-        Wedding Gift
+        Tặng quà
       </button>
       {isShowCard && <Card />}
     </div>
