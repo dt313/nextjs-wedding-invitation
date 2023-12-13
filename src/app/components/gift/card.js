@@ -6,11 +6,11 @@ import { useInView } from "framer-motion";
 import { copyTextToClipboard } from "~/app/hepler/copyTexttoClipboard";
 const cx = classNames.bind(styles);
 
-function Card() {
+function Card({ name, bank, number }) {
   const ref = useRef(null);
   const [copied, setCopied] = useState(false);
   const isInView = useInView(ref, { once: true });
-  const number = "1884 5112 7526 4458";
+
   const style = {
     transform: isInView ? "none" : "scale(0)",
     transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
@@ -30,9 +30,9 @@ function Card() {
   }, [copied]);
   return (
     <div className={cx("card")} style={style} ref={ref}>
-      <span className={cx("card-name")}>Woori bank</span>
+      <span className={cx("card-name")}>{bank}</span>
       <span className={cx("card-number")}>{number}</span>
-      <span className={cx("card-own")}>NGUYEN DANH TUAN</span>
+      <span className={cx("card-own")}>{name}</span>
       <button
         className={cx("card-btn")}
         onClick={() => {

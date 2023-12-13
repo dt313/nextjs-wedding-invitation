@@ -10,19 +10,17 @@ function ThirstPage() {
     {
       img: "https://hi.possiblewedding.com/wp-content/uploads/2023/01/wedding-ring-1-1.png",
       title: "Nhà trai",
-      date: "Sunday, December 31st 2023",
-      time: "09.00 AM",
-      address:
-        "Auditorium Poltekkes Medan Jl. Jamin Ginting Km. 13,5 Kelurahan Lau Cih, Kecamatan Medan Tuntungan, Kota Medan",
+      date: "Ngày 30, 31 tháng 12 năm 2023",
+      time: "10.00 AM",
+      address: "Đa Đinh , An Bình , Nam Sách, Hải Dương",
     },
 
     {
       img: "https://hi.possiblewedding.com/wp-content/uploads/2023/01/wedding-arch-1-1-1.png",
       title: "Nhà gái",
-      date: "Sunday, December 31st 2023",
-      time: "09.00 AM",
-      address:
-        "Auditorium Poltekkes Medan Jl. Jamin Ginting Km. 13,5 Kelurahan Lau Cih, Kecamatan Medan Tuntungan, Kota Medan",
+      date: "Ngày 30, 31 tháng 12 năm 2023",
+      time: "10.00 AM",
+      address: "Xóm 13 , An Đông , An Bình , Nam Sách , Hải Dương",
     },
   ];
 

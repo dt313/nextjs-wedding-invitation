@@ -1,16 +1,18 @@
-"use client";
 import classNames from "classnames/bind";
 import styles from "./page.module.scss";
 import Heart from "~/app/components/heart";
-import Head from "next/head";
+
 import Invitation from "~/app/components/invitation";
-import { useEffect, useState } from "react";
 
 const cx = classNames.bind(styles);
-
+export async function generateMetadata({ params, searchParams }) {
+  const name = decodeURIComponent(params.name) || "You";
+  return {
+    title: `Thiệp cưới - ${name}`,
+    description: "Helllo",
+  };
+}
 function Main({ params }) {
-  const [animation, setAnimation] = useState(false);
-
   const name = decodeURIComponent(params.name) || "You";
 
   // useEffect(() => {
@@ -28,16 +30,7 @@ function Main({ params }) {
 
   return (
     <div className={cx("wrapper")}>
-      <Head>
-        <title>Thiệp cưới</title>
-        <meta property="og:title" content="Thiệp cưới" key="title" />
-      </Head>
-      {/* {animation && (
-        <div className={cx("heart-block")}>
-          <Heart animation={animation} />
-        </div>
-      )} */}
-      {!animation && <Invitation name={name} />}
+      <Invitation name={name} />
     </div>
   );
 }

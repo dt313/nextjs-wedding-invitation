@@ -41,7 +41,7 @@ function IntroPage({ handleOpen, name = "You" }) {
           <div className={cx("right")}>
             <div className={cx("text-box")}>
               <div className={cx("name-box")}>
-                <h3 className={cx("name")}>Dương</h3>
+                <h3 className={cx("name")}>Đức</h3>
                 <span className={cx("and")}>&</span>
                 <h3 className={cx("name")}>Linh</h3>
               </div>

@@ -2,6 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./addressModel.module.scss";
 import Header from "../intro/header";
 import { SiHomeassistantcommunitystore } from "react-icons/si";
+import { BiHappyHeartEyes } from "react-icons/bi";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useRef } from "react";
@@ -48,12 +49,12 @@ function AddressModel({
         className={cx("btn", "small")}
         ref={ref}
       >
-        <FaMapMarkerAlt className={cx("icon")} />
+        <BiHappyHeartEyes className={cx("icon")} />
         Happy
       </motion.a>
       <motion.a
         style={style}
-        href="http://maps.google.com/?q=1200 Pennsylvania Ave SE, Washington, District of Columbia, 20003"
+        href={`http://maps.google.com/?q=${address}`}
         target="_blank"
         whileHover={{
           scale: 1.1,

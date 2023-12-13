@@ -46,12 +46,20 @@
   }
 }
 
+.card-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .card {
   box-sizing: border-box;
   max-width: 400px;
   width: 100%;
   height: auto;
-  margin-top: 48px;
+  margin: 48px 12px;
   padding: 12px;
   border: 2px solid var(--background-color);
   border-radius: 12px;

@@ -37,7 +37,12 @@ function Gift() {
         <FaGift className={cx("icon")} />
         Tặng quà
       </button>
-      {isShowCard && <Card />}
+      {isShowCard && (
+        <div className={cx("card-box")}>
+          <Card name="Lê Khánh Linh" number="1115122004" bank="Techcombank" />
+          <Card name="Lê Đình Đức" number="11522999999999" bank="Techcombank" />
+        </div>
+      )}
     </div>
   );
 }

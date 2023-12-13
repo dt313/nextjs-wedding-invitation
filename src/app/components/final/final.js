@@ -24,8 +24,10 @@ function Final() {
         />
       </div>
 
-      <span className={cx("final-text")}>Hẹn gặp bạn vào ngày quan trọng</span>
-      <h2 className={cx("name")}> Linh và Dương</h2>
+      <span className={cx("final-text")}>
+        Hẹn gặp bạn vào ngày quan trọng của chúng tôi
+      </span>
+      <h2 className={cx("name")}>Đức và Linh</h2>
     </div>
   );
 }

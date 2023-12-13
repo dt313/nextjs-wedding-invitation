@@ -8,20 +8,20 @@ const cx = classNames.bind(styles);
 function SecondPage() {
   const info = [
     {
-      name: "Carda",
-      fullname: "Nguyen Van A",
+      name: "Linh",
+      fullname: "Lê Khánh Linh",
       gender: "female",
-      fatherName: "Nguyen Van D ",
-      motherName: "Nguyen Thi E",
+      fatherName: "Lê Đình Thịnh",
+      motherName: "Nguyễn Thị Kim Anh",
       avatar:
         "https://hi.possiblewedding.com/wp-content/uploads/2022/05/so-tel-me-when.jpg",
     },
     {
-      name: "Bryan",
-      fullname: "Nguyen Thi B",
+      name: "Đức",
+      fullname: "Lê Đình Đức",
       gender: "male",
-      fatherName: "Nguyen Van A ",
-      motherName: "Nguyen Thi C",
+      fatherName: "Lê Đình Đản",
+      motherName: "Phạm Thị Ngà",
       avatar:
         "https://hi.possiblewedding.com/wp-content/uploads/2022/05/siaaahhh.jpg",
     },

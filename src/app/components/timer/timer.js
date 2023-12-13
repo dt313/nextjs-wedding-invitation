@@ -17,7 +17,7 @@ function Timer() {
 
   const wedding = {
     year: 2023,
-    day: 15,
+    day: 30,
     month: 12,
   };
 
@@ -106,7 +106,7 @@ function Timer() {
     <div className={cx("wrapper")} ref={ref}>
       <div className={cx("box")} style={style}>
         <h3 className={cx("title")}>
-          Đếm thời gian tới ngày lễ lớn của chúng tôi
+          Đếm thời gian tới ngày đặc biệt của chúng tôi
         </h3>
         <div className={cx("countdown")}>
           <div className={cx("countdown-box")}>
