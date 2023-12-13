@@ -3,32 +3,60 @@ import styles from "./journey.module.scss";
 import Image from "./image";
 import Story from "./story";
 import Preview from "../preview/preview";
+import { useState } from "react";
 const cx = classNames.bind(styles);
 
 const album = [
   {
     imgs: [
-      "https://hi.possiblewedding.com/wp-content/uploads/2022/05/vitor-pinto-iqA2-nRO0bQ-unsplash_compressed.jpg",
-      "https://hi.possiblewedding.com/wp-content/uploads/2022/05/alvin-mahmudov-VUMdDPNxTsg-unsplash-2.jpg",
+      {
+        id: 1,
+        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/vitor-pinto-iqA2-nRO0bQ-unsplash_compressed.jpg",
+      },
+      {
+        id: 2,
+        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/alvin-mahmudov-VUMdDPNxTsg-unsplash-2.jpg",
+      },
     ],
   },
   {
     imgs: [
-      "https://hi.possiblewedding.com/wp-content/uploads/2022/05/pablo-heimplatz-OSboZGvoEz4-unsplash-2_compressed.jpg",
-      "https://hi.possiblewedding.com/wp-content/uploads/2022/05/khamkeo-vilaysing-OcxlTBbb6SY-unsplash_compressed-1.jpg",
-      "https://hi.possiblewedding.com/wp-content/uploads/2022/05/khamkeo-vilaysing-OcxlTBbb6SY-unsplash_compressed-1.jpg",
+      {
+        id: 3,
+        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/pablo-heimplatz-OSboZGvoEz4-unsplash-2_compressed.jpg",
+      },
+      {
+        id: 4,
+        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/khamkeo-vilaysing-OcxlTBbb6SY-unsplash_compressed-1.jpg",
+      },
+      {
+        id: 5,
+        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/khamkeo-vilaysing-OcxlTBbb6SY-unsplash_compressed-1.jpg",
+      },
     ],
   },
   {
     imgs: [
-      "https://hi.possiblewedding.com/wp-content/uploads/2022/05/nathan-dumlao-9UDwXxaPxZc-unsplash_compressed-2.jpg",
-      "https://hi.possiblewedding.com/wp-content/uploads/2022/10/bride-and-groom-on-in-the-woods-2021-12-14-01-11-54-utc.jpg",
+      {
+        id: 6,
+        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/nathan-dumlao-9UDwXxaPxZc-unsplash_compressed-2.jpg",
+      },
+      {
+        id: 7,
+        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/10/bride-and-groom-on-in-the-woods-2021-12-14-01-11-54-utc.jpg",
+      },
     ],
   },
   {
     imgs: [
-      "https://hi.possiblewedding.com/wp-content/uploads/2022/05/marcus-lewis-87DgFV9SOc4-unsplash_compressed.jpg",
-      "https://hi.possiblewedding.com/wp-content/uploads/2022/05/chuttersnap-NYqEk7a42yc-unsplash_compressed-1.jpg",
+      {
+        id: 8,
+        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/marcus-lewis-87DgFV9SOc4-unsplash_compressed.jpg",
+      },
+      {
+        id: 9,
+        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/chuttersnap-NYqEk7a42yc-unsplash_compressed-1.jpg",
+      },
     ],
   },
 ];
@@ -53,6 +81,11 @@ const story = [
 ];
 
 function Journey() {
+  const [isShow, setIsShow] = useState(false);
+  const [index, setIndex] = useState(0);
+  const handleClosePreview = () => {
+    setIsShow(false);
+  };
   return (
     <div className={cx("wrapper")}>
       <h3 className={cx("title")}>Hành trình của chúng tôi</h3>
@@ -78,8 +111,14 @@ function Journey() {
             <div className={cx("column")} key={index}>
               {imgs.imgs.map((img, index) => {
                 return (
-                  <div className={cx("img-block")}>
-                    <Image key={index} img={img} />
+                  <div
+                    className={cx("img-block")}
+                    onClick={() => {
+                      setIsShow(true);
+                      setIndex(img.id);
+                    }}
+                  >
+                    <Image key={index} img={img.img} />
                   </div>
                 );
               })}
@@ -87,6 +126,10 @@ function Journey() {
           );
         })}
       </div>
+
+      {isShow && (
+        <Preview data={album} onClose={handleClosePreview} index={index} />
+      )}
 
       <div className={cx("story")}>
         {story.map((sto, index) => {

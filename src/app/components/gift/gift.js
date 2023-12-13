@@ -25,7 +25,7 @@ function Gift() {
       <h3 className={cx("title")}>Quà cưới</h3>
       <p className={cx("description")} style={style}>
         Dành cho gia đình (bạn bè) muốn gửi quà. Chúng tôi sẽ rất vui khi nhận
-        được nó. Nhấn vào các nút bên dưới để gửi chúng cho chúng tôi:
+        được nó. Nhấn vào nút bên dưới để gửi chúng cho chúng tôi:
       </p>
       <button
         className={cx("btn")}
