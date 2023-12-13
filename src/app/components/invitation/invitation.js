@@ -44,7 +44,6 @@ function Invitation({ name }) {
   useEffect(() => {
     if (isOpen == true) {
       let pageHeight = window.innerHeight;
-      console.log(pageHeight);
       scroll.scrollTo(pageHeight);
     }
   }, [isOpen]);

@@ -18,8 +18,6 @@ function Gift() {
     transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5",
   };
 
-  console.log(isInView);
-
   return (
     <div className={cx("wrapper")} ref={ref}>
       <h3 className={cx("title")}>Quà cưới</h3>

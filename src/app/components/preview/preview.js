@@ -17,7 +17,6 @@ import { useEffect, useState } from "react";
 const cx = classNames.bind(styles);
 
 function Preview({ data, onClose, index }) {
-  console.log(index);
   const [imgs, setImgs] = useState([]);
   const [swipper, setSwipper] = useState(null);
   const [activeIndex, setActiveIndex] = useState(swipper?.activeIndex);
@@ -44,11 +43,10 @@ function Preview({ data, onClose, index }) {
     swipper.slidePrev();
   };
 
-  console.log(imgs);
   return (
     <div className={cx("wrapper")}>
       <div className={cx("nav")}>
-        <span className={cx("paging")}>{`${activeIndex + 1 || 0}/${
+        <span className={cx("paging")}>{`${activeIndex + 1 || 1}/${
           imgs.length
         }`}</span>
 

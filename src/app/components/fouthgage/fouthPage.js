@@ -15,7 +15,6 @@ function FouthPage({ slug }) {
   const [isAttend, setIsAttend] = useState(null);
   const [error, setError] = useState(null);
 
-  console.log(slug);
   const style = {
     transform: isInView ? "none" : "translateY(700px)",
     transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
@@ -41,9 +40,6 @@ function FouthPage({ slug }) {
   const handleSubmit = () => {
     const isValid = checkError({ name, wish, isAttend });
     if (isValid) {
-      console.log({ name, wish, isAttend });
-      setWishes((pre) => [{ name, wish, isAttend }, ...pre]);
-
       var data = { name, wish, isAttend };
       fetch("https://65788350f08799dc80457e4e.mockapi.io/api/v1/wishes", {
         method: "POST", // or 'PUT'
@@ -56,6 +52,7 @@ function FouthPage({ slug }) {
         .then((data) => {
           console.log("Success:", data);
           alert("Cảm ơn vì lời chúc của bạn !");
+          setWishes((prev) => [data, ...prev]);
           setName("");
           setWish("");
         })
@@ -66,9 +63,13 @@ function FouthPage({ slug }) {
   };
 
   useEffect(() => {
+    function compareByDate(a, b) {
+      return b.createdAt - a.createdAt;
+    }
     fetch("https://65788350f08799dc80457e4e.mockapi.io/api/v1/wishes")
       .then((response) => response.json())
       .then((data) => {
+        data.sort(compareByDate);
         setWishes(data);
       });
   }, []);

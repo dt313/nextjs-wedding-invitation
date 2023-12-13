@@ -13,9 +13,15 @@ function Wishes({}) {
   const name = searchParams.get("name");
 
   useEffect(() => {
+    function compareByDate(a, b) {
+      return b.createdAt - a.createdAt;
+    }
+
     fetch("https://65788350f08799dc80457e4e.mockapi.io/api/v1/wishes")
       .then((response) => response.json())
       .then((data) => {
+        data.sort(compareByDate);
+
         setWishes(data);
       });
   }, []);
