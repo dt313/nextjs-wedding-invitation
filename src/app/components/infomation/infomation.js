@@ -40,8 +40,6 @@ function Infomation({
     transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
   };
 
-  console.log(images);
-
   return (
     <div className={cx("wrapper", className)} ref={ref}>
       <img

@@ -23,7 +23,7 @@ function Analyst({ data }) {
   }, [data]);
 
   return (
-    <div>
+    <div className={cx("wrapper")}>
       <Bar
         data={{
           labels: ["( People )"],

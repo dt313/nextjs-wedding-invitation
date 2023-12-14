@@ -133,9 +133,10 @@
     font-size: 2rem;
     margin-left: 4px;
     font-family: "Helvetica Neue", Helvetica, Arial;
-    font-weight: 200;
+    font-weight: 400;
     letter-spacing: 1px;
     text-transform: capitalize;
+    text-shadow: 1px 1px 1px var(--background-color);
   }
 }
 

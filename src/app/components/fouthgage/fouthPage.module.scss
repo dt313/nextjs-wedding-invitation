@@ -238,6 +238,10 @@
   color: red;
 }
 
+.analyst {
+  overflow-x: auto;
+}
+
 @media (max-width: 768px) {
   .container {
     border-radius: 25% 25% 40% 50% / 0% 0% 8% 8%;
