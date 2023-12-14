@@ -74,8 +74,12 @@
   margin: 12px 0;
 }
 
+.card-bow {
+  width: 100%;
+  filter: drop-shadow(1px 1px 2px #424244);
+}
+
 .card-number {
-  margin-top: 48px;
   margin-bottom: 12px;
   font-size: 1.6rem;
 }

@@ -20,6 +20,10 @@
   flex-direction: column;
   background-color: var(--primary-6);
   border-radius: 24px;
+  background-image: url(../../static/images/hand.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -79,5 +83,10 @@
   .title {
     font-size: 1.8rem;
     text-align: center;
+  }
+
+  .box {
+    background-size: contain;
+    background-position: bottom;
   }
 }

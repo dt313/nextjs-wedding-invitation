@@ -15,10 +15,18 @@ import { ImMusic } from "react-icons/im";
 import sound from "~/app/static/sound.mp3";
 import { useEffect, useRef, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
+import { useWindowSize } from "react-use";
+import Confetti from "react-confetti";
 const cx = classNames.bind(styles);
 function Invitation({ name }) {
   const [isOpenMusic, setIsOpenMusic] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+  useEffect(() => {
+    setHeight(window.innerHeight);
+    setWidth(window.innerWidth);
+  }, []);
 
   const ref = useRef(null);
 
@@ -50,6 +58,13 @@ function Invitation({ name }) {
 
   return (
     <div className={cx("wrapper")}>
+      <Confetti
+        width={width}
+        height={height}
+        numberOfPieces={100}
+        recycle={false}
+        gravity={0.08}
+      />
       <div className={cx("music")} onClick={handleOpenAudio}>
         <ImMusic className={cx("icon", isOpenMusic && "rotate")} />
         <audio ref={ref} src={sound} hidden />

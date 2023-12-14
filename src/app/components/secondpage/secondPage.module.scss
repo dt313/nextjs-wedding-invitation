@@ -9,6 +9,10 @@
   flex-direction: column;
   overflow: hidden;
   position: relative;
+  background-image: url(../../static/images/2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .title {
@@ -33,6 +37,9 @@
 }
 
 @media (max-width: 768px) {
+  .wrapper {
+    background-size: contain;
+  }
   .infomation {
     flex-direction: column;
 

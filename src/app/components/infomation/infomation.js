@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-
+import images from "~/app/static/images";
 const cx = classNames.bind(styles);
 
 function Infomation({
@@ -40,6 +40,8 @@ function Infomation({
     transition: "all 1.2s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
   };
 
+  console.log(images);
+
   return (
     <div className={cx("wrapper", className)} ref={ref}>
       <img
@@ -61,13 +63,19 @@ function Infomation({
         <span className={cx("text")}>{"Bà " + motherName}</span>
       </div>
 
-      <motion.a
+      {/* <motion.a
         className={cx("insta-box")}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
       >
         <FaInstagram className={cx("icon")} />
-      </motion.a>
+      </motion.a> */}
+
+      <img
+        className={cx("flower")}
+        src={images.flower.default.src}
+        style={styleText}
+      />
     </div>
   );
 }

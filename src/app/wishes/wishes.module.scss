@@ -10,31 +10,40 @@
 }
 
 .container {
-  max-width: 1024px;
-  width: 100%;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
+  max-width: 1024px;
+  width: 100%;
 }
 
 .wish {
-  box-sizing: border-box;
-  width: 300px;
-  margin: 12px;
+  margin: 0 6px;
+  margin-bottom: 12px;
   padding: 12px;
+  width: 300px;
+  min-height: 100px;
+  text-align: start;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 4px;
+  overflow: auto;
 }
 
 .name {
   font-size: 1.6rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--primary-1);
+  text-transform: uppercase;
 }
 
 .content {
   font-size: 1.4rem;
+}
+
+.isAttend {
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
 .link {

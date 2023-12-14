@@ -12,7 +12,6 @@ function Main() {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = () => {
-    console.log(name);
     if (name.trim() === "" && isCopied === true) {
       setError("Vui lòng nhập tên người mà bạn muốn mời ");
     } else {

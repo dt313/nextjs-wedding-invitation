@@ -4,6 +4,7 @@ import { ImCreditCard } from "react-icons/im";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "framer-motion";
 import { copyTextToClipboard } from "~/app/hepler/copyTexttoClipboard";
+import images from "~/app/static/images";
 const cx = classNames.bind(styles);
 
 function Card({ name, bank, number }) {
@@ -31,12 +32,16 @@ function Card({ name, bank, number }) {
   return (
     <div className={cx("card")} style={style} ref={ref}>
       <span className={cx("card-name")}>{bank}</span>
+      <img
+        className={cx("card-bow")}
+        alt="gift"
+        src={images.gift.default.src}
+      />
       <span className={cx("card-number")}>{number}</span>
       <span className={cx("card-own")}>{name}</span>
       <button
         className={cx("card-btn")}
         onClick={() => {
-          console.log("aaa");
           copyTextToClipboard(number);
           setCopied(true);
         }}

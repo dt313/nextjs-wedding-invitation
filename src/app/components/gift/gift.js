@@ -20,7 +20,7 @@ function Gift() {
 
   return (
     <div className={cx("wrapper")} ref={ref}>
-      <h3 className={cx("title")}>Quà cưới</h3>
+      <h3 className={cx("title")}>Quà Cưới</h3>
       <p className={cx("description")} style={style}>
         Dành cho gia đình (bạn bè) muốn gửi quà. Chúng tôi sẽ rất vui khi nhận
         được nó. Nhấn vào nút bên dưới để gửi chúng cho chúng tôi:

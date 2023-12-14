@@ -32,7 +32,7 @@ function Analyst({ data }) {
             {
               label: ["YES"],
               data: [yes],
-              backgroundColor: ["rgba(124, 149, 120, 0.2)"],
+              backgroundColor: ["rgba(124, 149, 120, 0.6)"],
               borderColor: ["rgb(124, 149, 120)"],
               borderWidth: 1,
             },
@@ -40,7 +40,7 @@ function Analyst({ data }) {
               label: ["NO"],
               data: [no],
 
-              backgroundColor: ["rgba(214 ,162 ,81, 0.2)"],
+              backgroundColor: ["rgba(214 ,162 ,81, 0.6)"],
               borderColor: ["rgb(214 ,162 ,81)"],
               borderWidth: 1,
             },

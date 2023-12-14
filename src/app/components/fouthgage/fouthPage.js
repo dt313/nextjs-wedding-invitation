@@ -3,6 +3,7 @@ import styles from "./fouthPage.module.scss";
 import { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "framer-motion";
 import Analyst from "~/app/components/analyst";
+import images from "~/app/static/images";
 const cx = classNames.bind(styles);
 
 function FouthPage({ slug }) {
@@ -14,7 +15,6 @@ function FouthPage({ slug }) {
   const [wish, setWish] = useState(" ");
   const [isAttend, setIsAttend] = useState(null);
   const [error, setError] = useState(null);
-
   const style = {
     transform: isInView ? "none" : "translateY(700px)",
     transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
@@ -22,15 +22,15 @@ function FouthPage({ slug }) {
 
   const checkError = ({ name, wish, isAttend }) => {
     if (name.trim() === "") {
-      setError("Vui long nhap ten cua ban");
+      setError("Vui lòng cho chúng tôi biết tên hoặc nickname của bạn !");
       return false;
     }
     if (wish.trim() === "") {
-      setError("Vui long nhap loi chuc cua ban");
+      setError("Vui lòng nhập lời chúc của bạn ! ");
       return false;
     }
     if (isAttend === null) {
-      setError("Hay cho chung toi biet ban co den tham du khong");
+      setError("Hãy cho chúng tôi biết bạn có đến tham dự hay không !");
       return false;
     }
 
@@ -50,9 +50,8 @@ function FouthPage({ slug }) {
       })
         .then((response) => response.json())
         .then((data) => {
-          console.log("Success:", data);
-          alert("Cảm ơn vì lời chúc của bạn !");
           setWishes((prev) => [data, ...prev]);
+          alert("Cảm ơn vì lời chúc của bạn !");
           setName("");
           setWish("");
         })
@@ -79,7 +78,10 @@ function FouthPage({ slug }) {
       <div className={cx("container")}>
         <div className={cx("box")} style={style}>
           <div className={cx("left")}>
-            <h4 className={cx("title")}>Gửi Lời Chúc</h4>
+            <h4 className={cx("title")}>
+              <img className={cx("flower")} src={images.flower3.default.src} />
+              Gửi Lời Chúc
+            </h4>
             <span className={cx("line")}></span>
             <p className={cx("description")}>
               Hãy dành những lời chúc cho tốt đẹp nhất cho cô dâu và chú rể
@@ -91,7 +93,7 @@ function FouthPage({ slug }) {
                 <input
                   type="text"
                   className={cx("input")}
-                  placeholder="Enter your name"
+                  placeholder="Nhập tên của bạn"
                   value={name}
                   onChange={(e) => {
                     setName(e.target.value);
@@ -104,7 +106,7 @@ function FouthPage({ slug }) {
                 <textarea
                   type="text"
                   className={cx("input", "large")}
-                  placeholder="Enter your wishes for them"
+                  placeholder="Nhập lời chúc của bạn "
                   value={wish}
                   onChange={(e) => {
                     setWish(e.target.value);
@@ -150,6 +152,7 @@ function FouthPage({ slug }) {
 
                 {error && <p className={cx("error")}>{error}</p>}
               </div>
+
               <motion.button
                 className={cx("btn")}
                 onClick={handleSubmit}

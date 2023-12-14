@@ -21,7 +21,6 @@ function Wishes({}) {
       .then((response) => response.json())
       .then((data) => {
         data.sort(compareByDate);
-
         setWishes(data);
       });
   }, []);
@@ -34,8 +33,11 @@ function Wishes({}) {
           wishes.map((w, index) => {
             return (
               <div className={cx("wish")} key={index}>
-                <span className={cx("name")}>{w.name}</span>
-                <p className={cx("content")}>{w.wish}</p>
+                <span className={cx("name")}>{w?.name}</span>
+                <p className={cx("content")}>{w?.wish}</p>
+                <span className={cx("isAttend")}>
+                  Tham dự : {w?.isAttend ? "Có" : "Không"}
+                </span>
               </div>
             );
           })
