@@ -1,4 +1,4 @@
-.wraper {
+.wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -6,6 +6,12 @@
   flex-direction: column;
   box-sizing: border-box;
   padding-bottom: 48px;
+
+  background-image: url(../../static/images/5.png);
+  background-repeat: no-repeat;
+  background-position: 200px bottom;
+  background-size: 15%;
+  filter: drop-shadow(1px 1px 2px #000000cc);
 }
 
 .title {
@@ -43,6 +49,10 @@
 }
 
 @media (max-width: 480px) {
+  .wrapper {
+    background-position: bottom right;
+    background-size: 20%;
+  }
   .title {
     font-size: 2.4rem;
   }

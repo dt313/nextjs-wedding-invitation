@@ -13,8 +13,8 @@ function Final() {
     transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.3s",
   };
   return (
-    <div className={cx("wraper")}>
-      <h3 className={cx("title")}>Cảm ơn</h3>
+    <div className={cx("wrapper")}>
+      <h3 className={cx("title")}>Cảm Ơn</h3>
       <div className={cx("img-box")}>
         <img
           ref={ref}
