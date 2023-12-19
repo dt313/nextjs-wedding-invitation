@@ -11,7 +11,8 @@ function ThirstPage() {
       img: "https://hi.possiblewedding.com/wp-content/uploads/2023/01/wedding-ring-1-1.png",
       title: "Nhà trai",
       date: "Ngày 30, 31 tháng 12 năm 2023",
-      time: "10.00 AM",
+      time: "5h chiều (ngày 30)",
+      time2: "7h sáng (ngày 31) ",
       address: "Đa Đinh , An Bình , Nam Sách, Hải Dương",
     },
 
@@ -19,7 +20,8 @@ function ThirstPage() {
       img: "https://hi.possiblewedding.com/wp-content/uploads/2023/01/wedding-arch-1-1-1.png",
       title: "Nhà gái",
       date: "Ngày 30, 31 tháng 12 năm 2023",
-      time: "10.00 AM",
+      time: "5h chiều (ngày 30)",
+      time2: "7h sáng (ngày 31) ",
       address: "Xóm 13 , An Đông , An Bình , Nam Sách , Hải Dương",
     },
   ];
@@ -45,6 +47,7 @@ function ThirstPage() {
               title={info.title}
               date={info.date}
               time={info.time}
+              time2={info.time2}
               address={info.address}
             />
           ))}

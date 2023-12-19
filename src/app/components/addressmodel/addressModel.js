@@ -15,6 +15,7 @@ function AddressModel({
   title = "",
   date = "",
   time = "",
+  time2 = "",
   address = "",
 }) {
   const ref = useRef(null);
@@ -31,6 +32,7 @@ function AddressModel({
       <h3 className={cx("title")}>{title}</h3>
       <p className={cx("date")}>{date}</p>
       <p className={cx("time")}>{time}</p>
+      <p className={cx("time")}>{time2}</p>
       <Header
         className={cx("black-icon")}
         icon={SiHomeassistantcommunitystore}
