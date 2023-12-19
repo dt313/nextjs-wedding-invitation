@@ -42,7 +42,7 @@ function Wishes({}) {
             );
           })
         ) : (
-          <p>Nodata</p>
+          <p>Chúng tôi rất vui nếu nhận được lời chúc từ các bạn</p>
         )}
       </div>
 

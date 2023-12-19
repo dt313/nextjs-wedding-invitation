@@ -197,7 +197,9 @@ function FouthPage({ slug }) {
                         );
                       })
                     ) : (
-                      <p className={cx("error")}>nodata</p>
+                      <p className={cx("error")}>
+                        Chúng tôi rất vui nếu nhận được lời chúc từ các bạn
+                      </p>
                     )}
                   </div>
                   {wishes.length > 0 && (

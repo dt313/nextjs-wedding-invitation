@@ -28,11 +28,10 @@ function FirstPage() {
           <h3 className={cx("title")}>Tie The Knot</h3>
           <Header style={headerStyle} />
           <p className={cx("description")}>
-            “Anh muốn đem cả thế giới này tặng cho em cái em thích cũng là cái
-            anh thích . Cho dù khi em 70 , 80 tuổi , rằng có rụng hết thì vẫn
-            mãi là công chúa của anh . Em thường nói , sau này em già đi thì
-            phải làm thế nào . Anh chỉ có thể nói là anh đã chiều hư em rồi . Vì
-            chỉ có như vậy người khác mới không thể cướp em đi .”
+            “Tình cảm ấy, chẳng cần cứ phải hét to lên cho cả thế giới biết, chỉ
+            cần thủ thỉ cho một người là cả thế giới của mình nghe là đủ rồi.
+            Điều quan trọng nhất là đến cuối đường vẫn còn ở bên nhau, đi cạnh
+            nhau, nắm tay nhau, rung động vì nhau. Cứ thế thôi là đủ rồi!”
           </p>
         </div>
 
