@@ -3,7 +3,7 @@ import styles from "./firstPage.module.scss";
 import Header from "../intro/header";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-
+import { wedding } from "~/app/static/images";
 const cx = classNames.bind(styles);
 
 function FirstPage() {
@@ -37,11 +37,7 @@ function FirstPage() {
         </div>
 
         <div className={cx("img-box")}>
-          <img
-            className={cx("img")}
-            src="https://hi.possiblewedding.com/wp-content/uploads/2022/05/o-gitu-2.jpg"
-            alt="wedding"
-          />
+          <img className={cx("img")} src={wedding.gray7} alt="wedding" />
         </div>
       </div>
     </div>

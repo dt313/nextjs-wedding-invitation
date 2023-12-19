@@ -32,8 +32,8 @@ function Analyst({ data }) {
             {
               label: ["YES"],
               data: [yes],
-              backgroundColor: ["rgba(124, 149, 120, 0.6)"],
-              borderColor: ["rgb(124, 149, 120)"],
+              backgroundColor: ["rgba(247, 163, 162, 0.6)"],
+              borderColor: ["rgb(247, 163, 162)"],
               borderWidth: 1,
             },
             {

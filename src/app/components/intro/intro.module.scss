@@ -8,7 +8,7 @@
 }
 
 .block-wrapper {
-  background-color: #e3eee7;
+  background-color: #ffffff;
   padding: 16px;
   width: 90%;
   height: 400px;
@@ -92,7 +92,7 @@
   background-image: url(../../static/images/1.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: 50%;
 }
 
 .text-box {
@@ -127,16 +127,19 @@
 
   .dear {
     font-size: 1.4rem;
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-family: "Helvetica Neue", Helvetica, Arial;
   }
 
   .dear-name {
     font-size: 2rem;
     margin-left: 4px;
     font-family: "Helvetica Neue", Helvetica, Arial;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 1px;
     text-transform: capitalize;
-    text-shadow: 1px 1px 1px var(--background-color);
+    text-shadow: 1px 1px 1px #fff;
   }
 }
 
@@ -197,6 +200,10 @@
 }
 
 @media (max-width: 480px) {
+  .wrapper {
+    align-items: flex-start;
+    padding-top: 24px;
+  }
   .block-wrapper {
     width: 80%;
     margin: 0;

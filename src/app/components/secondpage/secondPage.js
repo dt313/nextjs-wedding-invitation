@@ -3,6 +3,7 @@ import styles from "./secondPage.module.scss";
 import Infomation from "../infomation";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import { wedding } from "~/app/static/images";
 
 const cx = classNames.bind(styles);
 function SecondPage() {
@@ -13,8 +14,7 @@ function SecondPage() {
       gender: "female",
       fatherName: "Lê Đình Thịnh",
       motherName: "Nguyễn Thị Kim Anh",
-      avatar:
-        "https://hi.possiblewedding.com/wp-content/uploads/2022/05/so-tel-me-when.jpg",
+      avatar: wedding?.gray1,
     },
     {
       name: "Đức",
@@ -22,8 +22,7 @@ function SecondPage() {
       gender: "male",
       fatherName: "Lê Đình Đản",
       motherName: "Phạm Thị Ngà",
-      avatar:
-        "https://hi.possiblewedding.com/wp-content/uploads/2022/05/siaaahhh.jpg",
+      avatar: wedding?.gray2,
     },
   ];
 

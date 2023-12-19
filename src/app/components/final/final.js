@@ -2,6 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./final.module.scss";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { wedding } from "~/app/static/images";
 
 const cx = classNames.bind(styles);
 function Final() {
@@ -20,7 +21,7 @@ function Final() {
           ref={ref}
           style={style}
           className={cx("img")}
-          src="https://hi.possiblewedding.com/wp-content/uploads/2022/05/nathan-dumlao-9UDwXxaPxZc-unsplash_compressed-2.jpg"
+          src={wedding.gray5}
         />
       </div>
 

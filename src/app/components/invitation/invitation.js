@@ -15,7 +15,7 @@ import { ImMusic } from "react-icons/im";
 import sound from "~/app/static/sound.mp3";
 import { useEffect, useRef, useState } from "react";
 import { animateScroll as scroll } from "react-scroll";
-import { useWindowSize } from "react-use";
+import { wedding } from "~/app/static/images";
 import Confetti from "react-confetti";
 const cx = classNames.bind(styles);
 function Invitation({ name }) {
@@ -75,10 +75,7 @@ function Invitation({ name }) {
           <FirstPage />
           <SecondPage />
           <div className={cx("img-box")}>
-            <img
-              className={cx("img")}
-              src="https://hi.possiblewedding.com/wp-content/uploads/2022/05/joanna-nix-walkup-vgkjJlEj-VQ-unsplash_compressed-1.jpg"
-            ></img>
+            <img className={cx("img")} src={wedding.red8}></img>
           </div>
           <ThirstPage />
           <FouthPage slug={name} />

@@ -4,6 +4,7 @@ import Image from "./image";
 import Story from "./story";
 import Preview from "../preview/preview";
 import { useState } from "react";
+import { wedding } from "~/app/static/images";
 const cx = classNames.bind(styles);
 
 const album = [
@@ -11,51 +12,78 @@ const album = [
     imgs: [
       {
         id: 1,
-        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/vitor-pinto-iqA2-nRO0bQ-unsplash_compressed.jpg",
+        img: wedding.red1,
       },
+
       {
         id: 2,
-        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/alvin-mahmudov-VUMdDPNxTsg-unsplash-2.jpg",
+        img: wedding.red3,
       },
-    ],
-  },
-  {
-    imgs: [
       {
         id: 3,
-        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/pablo-heimplatz-OSboZGvoEz4-unsplash-2_compressed.jpg",
+        img: wedding.red4,
       },
+
       {
         id: 4,
-        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/khamkeo-vilaysing-OcxlTBbb6SY-unsplash_compressed-1.jpg",
-      },
-      {
-        id: 5,
-        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/khamkeo-vilaysing-OcxlTBbb6SY-unsplash_compressed-1.jpg",
+        img: wedding.red6,
       },
     ],
   },
   {
     imgs: [
       {
+        id: 5,
+        img: wedding.red4,
+      },
+      {
         id: 6,
-        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/nathan-dumlao-9UDwXxaPxZc-unsplash_compressed-2.jpg",
+        img: wedding.red7,
       },
       {
         id: 7,
-        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/10/bride-and-groom-on-in-the-woods-2021-12-14-01-11-54-utc.jpg",
+        img: wedding.red8,
+      },
+      {
+        id: 8,
+        img: wedding.red9,
       },
     ],
   },
   {
     imgs: [
       {
-        id: 8,
-        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/marcus-lewis-87DgFV9SOc4-unsplash_compressed.jpg",
+        id: 9,
+        img: wedding.gray3,
+      },
+
+      {
+        id: 10,
+        img: wedding.gray6,
       },
       {
-        id: 9,
-        img: "https://hi.possiblewedding.com/wp-content/uploads/2022/05/chuttersnap-NYqEk7a42yc-unsplash_compressed-1.jpg",
+        id: 11,
+        img: wedding.gray4,
+      },
+      {
+        id: 12,
+        img: wedding.gray5,
+      },
+    ],
+  },
+  {
+    imgs: [
+      {
+        id: 13,
+        img: wedding.gray7,
+      },
+      {
+        id: 14,
+        img: wedding.gray8,
+      },
+      {
+        id: 15,
+        img: wedding.gray9,
       },
     ],
   },
@@ -90,7 +118,7 @@ function Journey() {
     <div className={cx("wrapper")}>
       <h3 className={cx("title")}>Hành trình của chúng tôi</h3>
 
-      <div className={cx("video-block")}>
+      {/* <div className={cx("video-block")}>
         <iframe
           className={cx("video")}
           width="1120"
@@ -101,7 +129,7 @@ function Journey() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
-      </div>
+      </div> */}
 
       {/* <Preview data={album} /> */}
 

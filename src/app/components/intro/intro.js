@@ -6,8 +6,8 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { motion, useInView } from "framer-motion";
 import Header from "./header";
 import Arrow from "~/app/components/arrow";
+import { wedding } from "~/app/static/images";
 const cx = classNames.bind(styles);
-
 function IntroPage({ handleOpen, name = "You" }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -32,10 +32,7 @@ function IntroPage({ handleOpen, name = "You" }) {
             <Header style={style} />
 
             <div className={cx("img-box")}>
-              <img
-                className={cx("img")}
-                src="https://hi.possiblewedding.com/wp-content/uploads/2022/05/cody-black-VDb0wxbfG6k-unsplash_compressed-1.jpg"
-              />
+              <img className={cx("img")} src={wedding.gray4} />
             </div>
           </div>
           <div className={cx("right")}>
