@@ -14,6 +14,8 @@ function ThirstPage() {
       time: "5h chiều (ngày 30)",
       time2: "7h sáng (ngày 31) ",
       address: "Đa Đinh , An Bình , Nam Sách, Hải Dương",
+      street: "299C+PC5 Nam Sách, Hải Dương",
+      phone: "098 6465823",
     },
 
     {
@@ -23,6 +25,8 @@ function ThirstPage() {
       time: "5h chiều (ngày 30)",
       time2: "7h sáng (ngày 31) ",
       address: "Xóm 13 , An Đông , An Bình , Nam Sách , Hải Dương",
+      street: "29G6+H7J Nam Sách, Hải Dương",
+      phone: "083 3993209",
     },
   ];
 
@@ -49,6 +53,8 @@ function ThirstPage() {
               time={info.time}
               time2={info.time2}
               address={info.address}
+              street={info.street}
+              phone={info.phone}
             />
           ))}
         </div>

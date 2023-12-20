@@ -7,7 +7,7 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
-
+import { FaPhone } from "react-icons/fa6";
 const cx = classNames.bind(styles);
 function AddressModel({
   className,
@@ -17,6 +17,8 @@ function AddressModel({
   time = "",
   time2 = "",
   address = "",
+  street = "",
+  phone = "",
 }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -37,7 +39,9 @@ function AddressModel({
         className={cx("black-icon")}
         icon={SiHomeassistantcommunitystore}
       />
-      <div className={cx("address")}>{address}</div>
+      <div className={cx("address")}>
+        {address} <p className={cx("street")}>{`(${street})`}</p>
+      </div>
       <motion.a
         style={style}
         whileHover={{
@@ -48,15 +52,16 @@ function AddressModel({
           scale: 0.9,
           transition: "all 0.1s cubic-bezier(0.17, 0.55, 0.55, 1)",
         }}
-        className={cx("btn", "small")}
+        className={cx("btn")}
+        href={`tel:${phone}`}
         ref={ref}
       >
-        <BiHappyHeartEyes className={cx("icon")} />
-        Happy
+        <FaPhone className={cx("icon")} />
+        {phone}
       </motion.a>
       <motion.a
         style={style}
-        href={`http://maps.google.com/?q=${address}`}
+        href={`http://maps.google.com/?q=${street}`}
         target="_blank"
         whileHover={{
           scale: 1.1,
@@ -64,7 +69,7 @@ function AddressModel({
         whileTap={{
           scale: 0.9,
         }}
-        className={cx("btn")}
+        className={cx("btn", "small")}
       >
         <FaMapMarkerAlt className={cx("icon")} />
         Đường đi

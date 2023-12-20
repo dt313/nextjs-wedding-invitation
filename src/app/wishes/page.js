@@ -42,7 +42,9 @@ function Wishes({}) {
             );
           })
         ) : (
-          <p>Chúng tôi rất vui nếu nhận được lời chúc từ các bạn</p>
+          <p className={cx("nodata")}>
+            Chúng tôi rất vui nếu nhận được lời chúc từ các bạn
+          </p>
         )}
       </div>
 

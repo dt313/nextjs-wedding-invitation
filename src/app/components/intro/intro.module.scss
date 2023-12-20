@@ -92,7 +92,7 @@
   background-image: url(../../static/images/1.png);
   background-repeat: no-repeat;
   background-position: 50% 75%;
-  background-size: 40%;
+  background-size: 43%;
 }
 
 .text-box {
@@ -140,6 +140,7 @@
     letter-spacing: 1px;
     text-transform: capitalize;
     text-shadow: 1px 1px 1px #fff;
+    text-align: center;
   }
 }
 
@@ -235,7 +236,7 @@
     }
     .dear-name {
       font-size: 1.6rem;
-      line-height: 0;
+      line-height: 1;
     }
   }
 }
