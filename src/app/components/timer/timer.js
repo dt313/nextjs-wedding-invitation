@@ -17,7 +17,7 @@ function Timer() {
 
   const wedding = {
     year: 2023,
-    day: 30,
+    day: 31,
     month: 12,
   };
 
