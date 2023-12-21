@@ -14,11 +14,11 @@ const album = [
         id: 1,
         img: wedding.red1,
       },
-
       {
         id: 2,
-        img: wedding.red3,
+        img: wedding.red8,
       },
+
       {
         id: 3,
         img: wedding.red4,
@@ -28,24 +28,29 @@ const album = [
         id: 4,
         img: wedding.red6,
       },
+      {
+        id: 5,
+        img: wedding.red7,
+      },
     ],
   },
   {
     imgs: [
       {
-        id: 5,
-        img: wedding.red4,
-      },
-      {
         id: 6,
-        img: wedding.red7,
+        img: wedding.gray13,
       },
       {
         id: 7,
-        img: wedding.red8,
+        img: wedding.gray3,
       },
       {
         id: 8,
+        img: wedding.red3,
+      },
+
+      {
+        id: 9,
         img: wedding.red9,
       },
     ],
@@ -53,37 +58,91 @@ const album = [
   {
     imgs: [
       {
-        id: 9,
-        img: wedding.gray3,
+        id: 10,
+        img: wedding.gray12,
       },
 
       {
-        id: 10,
-        img: wedding.gray6,
-      },
-      {
         id: 11,
-        img: wedding.gray4,
+        img: wedding.gray5,
       },
       {
         id: 12,
-        img: wedding.gray5,
+        img: wedding.gray8,
+      },
+      {
+        id: 13,
+        img: wedding.gray9,
+      },
+      {
+        id: 14,
+        img: wedding.gray10,
       },
     ],
   },
   {
     imgs: [
       {
-        id: 13,
+        id: 15,
+        img: wedding.gray6,
+      },
+      {
+        id: 16,
+        img: wedding.gray11,
+      },
+      {
+        id: 17,
         img: wedding.gray7,
       },
+
       {
-        id: 14,
-        img: wedding.gray8,
+        id: 18,
+        img: wedding.gray14,
       },
       {
-        id: 15,
-        img: wedding.gray9,
+        id: 19,
+        img: wedding.gray15,
+      },
+    ],
+  },
+  {
+    imgs: [
+      {
+        id: 20,
+        img: wedding.black2,
+      },
+      {
+        id: 21,
+        img: wedding.black1,
+      },
+
+      {
+        id: 22,
+        img: wedding.black3,
+      },
+      {
+        id: 23,
+        img: wedding.black4,
+      },
+    ],
+  },
+  {
+    imgs: [
+      {
+        id: 24,
+        img: wedding.black5,
+      },
+      {
+        id: 25,
+        img: wedding.black6,
+      },
+      {
+        id: 26,
+        img: wedding.black7,
+      },
+      {
+        id: 27,
+        img: wedding.black8,
       },
     ],
   },
